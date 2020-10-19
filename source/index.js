@@ -1,5 +1,4 @@
 import xml from "xml-js"
-import toXml from "xml"
 import { merge } from "merge-anything"
 
 /**
