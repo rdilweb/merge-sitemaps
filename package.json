@@ -1,0 +1,57 @@
+{
+    "name": "merge-sitemaps",
+    "version": "1.0.0",
+    "description": "A simple CLI and npm package to merge sitemaps together.",
+    "homepage": "https://github.com/rdilweb/merge-sitemaps",
+    "bin": {
+        "merge-sitemaps": "./src/index.js"
+    },
+    "keywords": [
+        "sitemap",
+        "merge",
+        "sitemaps",
+        "combine",
+        "web",
+        "rdil",
+        "rdilweb"
+    ],
+    "dependencies": {
+        "commander": "^6.1.0",
+        "merge-anything": "^3.0.6",
+        "xml": "^1.0.1",
+        "xml-js": "^1.6.11"
+    },
+    "files": [
+        "src"
+    ],
+    "license": "MIT",
+    "author": "Reece Dunham <me@rdil.rocks>",
+    "bugs": {
+        "url": "https://github.com/rdilweb/merge-sitemaps/issues"
+    },
+    "main": "src/cli.js",
+    "scripts": {
+        "prettier": "prettier --write **/**.{js,json}",
+        "build": "babel source -d src",
+        "dev": "rimraf dev/outmap.xml && yarn build && node src/cli.js dev/basemap.xml dev/testmap1.xml dev/outmap.xml",
+        "test": "eslint source/*.js"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.12.1",
+        "@babel/core": "^7.12.3",
+        "@babel/preset-env": "^7.12.1",
+        "@types/node": "^14.11.10",
+        "eslint": "^7.11.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "prettier": "^2.1.2",
+        "rimraf": "^3.0.2"
+    },
+    "prettier": {
+        "semi": false,
+        "tabWidth": 4
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rdilweb/merge-sitemaps.git"
+    }
+}
