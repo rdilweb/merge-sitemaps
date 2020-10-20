@@ -4,7 +4,7 @@
     "description": "A simple CLI and npm package to merge sitemaps together.",
     "homepage": "https://github.com/rdilweb/merge-sitemaps",
     "bin": {
-        "merge-sitemaps": "./src/index.js"
+        "merge-sitemaps": "./src/cli.js"
     },
     "keywords": [
         "sitemap",
