@@ -13,11 +13,11 @@ const possibleVals = [
  * @returns {string} The generated XML.
  */
 export default function mergeSitemaps(map1, map2) {
-    possibleVals.forEach(val => {
+    possibleVals.forEach((val) => {
         map2 = map2.replace(val, "<urlset>")
     })
-    
+
     let stuff = map2.split("<urlset>") // get elements before/after
-    
+
     return map1.replace("</urlset>", stuff[1])
 }
