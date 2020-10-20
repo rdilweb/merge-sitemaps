@@ -31,4 +31,3 @@ MIT. See the LICENSE file.
 
 - [Reece Dunham](https://rdil.rocks) - Author
 - [Dowland Aiello](https://github.com/dowlandaiello) - Making it work
-- [This StackOverflow post](https://stackoverflow.com/questions/27936772/how-to-deep-merge-instead-of-shallow-merge) - Very helpful
