@@ -1,25 +1,9 @@
-import xml from "xml-js"
-
-const isObject = (target) =>
-    typeof target === "object" && !Array.isArray(target)
-
-const mergeDeep = (target, ...sources) => {
-    if (!sources.length) return target
-    const source = sources.shift()
-
-    if (isObject(target) && isObject(source)) {
-        for (const key in source) {
-            if (isObject(source[key])) {
-                if (!target[key]) Object.assign(target, { [key]: {} })
-                mergeDeep(target[key], source[key])
-            } else {
-                Object.assign(target, { [key]: source[key] })
-            }
-        }
-    }
-
-    return mergeDeep(target, ...sources)
-}
+// The data included on the "urlset" tag
+// please just keep it as one of these
+const possibleVals = [
+    `<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">`,
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">`,
+]
 
 /**
  * Merge sitemaps together.
@@ -29,10 +13,11 @@ const mergeDeep = (target, ...sources) => {
  * @returns {string} The generated XML.
  */
 export default function mergeSitemaps(map1, map2) {
-    let mapObj = xml.xml2js(map1, { compact: true })
-    const secondMap = xml.xml2js(map2, { compact: true })
-
-    mergeDeep(mapObj, secondMap)
-
-    return xml.js2xml(mapObj, { compact: true })
+    possibleVals.forEach(val => {
+        map2 = map2.replace(val, "<urlset>")
+    })
+    
+    let stuff = map2.split("<urlset>") // get elements before/after
+    
+    return map1.replace("</urlset>", stuff[1])
 }

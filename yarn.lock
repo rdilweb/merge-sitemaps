@@ -1928,11 +1928,6 @@ is-symbol@^1.0.2:
   dependencies:
     has-symbols "^1.0.1"
 
-is-what@^3.11.2:
-  version "3.11.2"
-  resolved "https://registry.yarnpkg.com/is-what/-/is-what-3.11.2.tgz#4ca0c91b236acea48dd6af0a072d6a84aec7a1d4"
-  integrity sha512-m7LzBsC9TqUhkBrozSmmWfVO7VYnjk9UHu0U+Y8BiJRnc1TYIK/3Qv4DteuiBpn2S4K7n3N4WNC4pe6wEx2xYg==
-
 is-windows@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/is-windows/-/is-windows-1.0.2.tgz#d1850eb9791ecd18e6182ce12a30f396634bb19d"
@@ -2056,14 +2051,6 @@ map-visit@^1.0.0:
   integrity sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
   dependencies:
     object-visit "^1.0.0"
-
-merge-anything@^3.0.6:
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/merge-anything/-/merge-anything-3.0.6.tgz#8b34913972352099802846ff29aa26978d616561"
-  integrity sha512-99R1BLqTsYxxQZFsWti71NWawIrP2zgRaJwxARpEZI7XV92PUih6ISgjMaZZwcGzsnAeu1eUwRSli/ec/O3Fug==
-  dependencies:
-    is-what "^3.11.2"
-    ts-toolbelt "^8.0.6"
 
 micromatch@^3.1.10, micromatch@^3.1.4:
   version "3.1.10"
@@ -2459,11 +2446,6 @@ safe-regex@^1.1.0:
   dependencies:
     ret "~0.1.10"
 
-sax@^1.2.4:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
-  integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
-
 semver@7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.0.0.tgz#5f3ca35761e47e05b206c6daff2cf814f0316b8e"
@@ -2703,11 +2685,6 @@ to-regex@^3.0.1, to-regex@^3.0.2:
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
 
-ts-toolbelt@^8.0.6:
-  version "8.0.7"
-  resolved "https://registry.yarnpkg.com/ts-toolbelt/-/ts-toolbelt-8.0.7.tgz#4dad2928831a811ee17dbdab6eb1919fc0a295bf"
-  integrity sha512-KICHyKxc5Nu34kyoODrEe2+zvuQQaubTJz7pnC5RQ19TH/Jged1xv+h8LBrouaSD310m75oAljYs59LNHkLDkQ==
-
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/type-check/-/type-check-0.4.0.tgz#07b8203bfa7056c0657050e3ccd2c37730bab8f1"
@@ -2816,10 +2793,3 @@ write@1.0.3:
   integrity sha512-/lg70HAjtkUgWPVZhZcm+T4hkL8Zbtp1nFNOn3lRrxnlv50SRBv7cR7RqR+GMsd3hUXy9hWBo4CHTbFTcOYwig==
   dependencies:
     mkdirp "^0.5.1"
-
-xml-js@^1.6.11:
-  version "1.6.11"
-  resolved "https://registry.yarnpkg.com/xml-js/-/xml-js-1.6.11.tgz#927d2f6947f7f1c19a316dd8eea3614e8b18f8e9"
-  integrity sha512-7rVi2KMfwfWFl+GpPg6m80IVMWXLRjO+PxTq7V2CDhoGak0wzYzFgUY2m4XJ47OGdXd8eLE8EmwfAmdjw7lC1g==
-  dependencies:
-    sax "^1.2.4"
