@@ -1,5 +1,7 @@
 # merge-sitemaps
 
+***WARNING: THIS PACKAGE IS DEPRECATED.***
+
 A simple CLI and npm package to merge sitemaps together.
 
 ## Usage
